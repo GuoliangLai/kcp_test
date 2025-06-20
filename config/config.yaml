@@ -1,0 +1,11 @@
+role: server
+transfer_tool: 
+- udp
+- kcp
+kcp:
+  conv: 123456
+net: 
+  local_ip: 192.168.2.100
+  local_port: 1786
+  remote_ip: 192.168.2.102
+  remote_port: 1785
