@@ -27,7 +27,7 @@ void *run_recv_msg_thread(void *obj) {
     int64_t send_clock = std::stoll(message->getdata());
     int recv_index = message->getindex();
     // 收到第一条报文
-    //std::cout << "收到数据index：" << recv_index << "data: " << send_clock << std::endl;
+    std::cout << "收到数据index：" << recv_index << "data: " << send_clock << std::endl;
     if (dataprocess->getIndexQue().empty()) {
       dataprocess->getIndexQue().push(std::pair<int, int>(recv_index, send_clock));  
       int64_t current_time = iclock64();
